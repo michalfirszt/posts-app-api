@@ -101,6 +101,7 @@ return [
     'schemas' => [
         'default' => [
             'query' => [
+                'user' => App\GraphQL\Queries\UserQuery::class,
                 'users' => App\GraphQL\Queries\UsersQuery::class,
             ],
             'mutation' => [
