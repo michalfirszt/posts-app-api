@@ -100,15 +100,20 @@ return [
     //
     'schemas' => [
         'default' => [
-            'query' => [
-                'user' => App\GraphQL\Queries\UserQuery::class,
-                'users' => App\GraphQL\Queries\UsersQuery::class,
-            ],
+            'query' => [],
             'mutation' => [
                 // 'example_mutation'  => ExampleMutation::class,
             ],
             'middleware' => [],
             'method' => ['get', 'post'],
+        ],
+        'user' => [
+            'query' => [
+                'user' => App\GraphQL\Queries\UserQuery::class,
+                'users' => App\GraphQL\Queries\UsersQuery::class,
+            ],
+            'mutation' => [],
+            'middleware' => ['api', 'auth:api'],
         ],
     ],
 
